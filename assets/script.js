@@ -20,18 +20,22 @@ function myFunction() {
     const chilometri = document.getElementById("numKm").value;
     const prezzo_minori_scontato = (0.21 * chilometri) - (((0.21 * chilometri) * 20) / 100);
     const prezzo_maggiori_scontato = (0.21 * chilometri) - (((0.21 * chilometri) * 40) / 100);
-    
+    let eta = document.getElementById("eta_1");
 
-if (('#min')) {
+if (eta.value === 'min') {
 
-    document.getElementById('risultato').innerHTML = (nome + prezzo_minori_scontato.toFixed(2)) + '€';
+    document.getElementById('risultato').innerHTML = (nome + ' ' + prezzo_minori_scontato.toFixed(2)) + '€';
 }
-else if (('#magg')) {
+else if (eta.value === 'magg') {
 
-    document.getElementById('risultato').innerHTML = (nome + prezzo_maggiori_scontato.toFixed(2)) + '€';
+    document.getElementById('risultato').innerHTML = (nome + ' ' +  prezzo_maggiori_scontato.toFixed(2)) + '€';
 }
 else {
 
-    document.getElementById('risultato').innerHTML = (nome + ('prezzo non scontato: ') + (0.21 * ('#numKM')).toFixed(2)) + '€';
+    document.getElementById('risultato').innerHTML = (nome + (' prezzo non scontato: ') + (0.21 * chilometri).toFixed(2)) + '€';
 }
+}
+function funzione2(){
+    document.getElementById("myText").value = "";
+    document.getElementById("numKm").value = "";
 }
