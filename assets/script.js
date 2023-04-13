@@ -21,16 +21,29 @@ function myFunction() {
     const prezzo_minori_scontato = (0.21 * chilometri) - (((0.21 * chilometri) * 20) / 100);
     const prezzo_maggiori_scontato = (0.21 * chilometri) - (((0.21 * chilometri) * 40) / 100);
     let eta = document.getElementById("eta_1");
+    document.getElementById("nome_pass").innerHTML = (nome);
+    // document.getElementById("rRiepilogo").innerHTML = (risultato);
+    document.getElementById('cRandom').innerHTML = (getRandomInt(9999));
+    document.getElementById('num_car').innerHTML = (getRandomInt(10));
+
+
 
 if (eta.value === 'min') {
+    document.getElementById("rRiepilogo").innerHTML = (' ' + prezzo_minori_scontato.toFixed(2)) + ' ' + '€';
+    document.getElementById('offerta').innerHTML = 'Sconto Minori';
 
     document.getElementById('risultato').innerHTML = (nome + ' ' + prezzo_minori_scontato.toFixed(2)) + '€';
 }
 else if (eta.value === 'magg') {
 
+    document.getElementById("rRiepilogo").innerHTML = (' ' +  prezzo_maggiori_scontato.toFixed(2)) + ' ' + '€';
+    document.getElementById('offerta').innerHTML = 'Sconto Anziani';
+
     document.getElementById('risultato').innerHTML = (nome + ' ' +  prezzo_maggiori_scontato.toFixed(2)) + '€';
 }
 else {
+    document.getElementById("rRiepilogo").innerHTML =  ((' prezzo non scontato: ') + (0.21 * chilometri).toFixed(2)) + ' ' + ' €';
+    document.getElementById('offerta').innerHTML = 'Biglietto standard';
 
     document.getElementById('risultato').innerHTML = (nome + (' prezzo non scontato: ') + (0.21 * chilometri).toFixed(2)) + '€';
 }
@@ -39,3 +52,22 @@ function funzione2(){
     document.getElementById("myText").value = "";
     document.getElementById("numKm").value = "";
 }
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+    
+}
+
+console.log(getRandomInt(9999));
+
+
+
+
+
+
+
+
+
+
+
+
+

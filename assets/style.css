@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn_cont h3{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.btn_cont{
+    width: 100px;
+    align-self: center;
+}
+.container{
+    text-align: center;
+    background-color: aqua;
+    height: 300px;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.container div{
+    width: calc(100% / 3);
+}
+.btn_click{
+    margin-top: 20px;
+}
+.container2{
+    padding: 20px;
+    width: 1000px;
+    margin: auto;
+    background-color: aqua;
+    height: 300px;
+}
+.biglietto{
+    width: 100%;
+    height: 80%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 1rem;
+}
+.biglietto div{
+    text-align: center;
+    
+    width: 200px;
+    height: 100%;
+    
+
+}
+.biglietto .nome_passeggero{
+    width: 400px;
+    height: 100%;
+    background-color: gray;
+
+}
